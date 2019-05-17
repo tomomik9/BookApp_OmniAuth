@@ -37,3 +37,5 @@
 # Ignore uploaded image
 /public/uploads/book/picture/**/**
 
+# Ignore .env
+.env

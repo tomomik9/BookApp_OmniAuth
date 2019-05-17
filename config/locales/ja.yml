@@ -41,6 +41,13 @@ ja:
         Editing Book: '編集画面'
         Show: '詳細画面'
         Back: '戻る'
+  devise:
+     sessions:
+        new:
+            Username: 'ユーザー名'
+     registrations:
+        new:
+            Username: 'ユーザー名'   
   helpers:
      submit:
         create: '登録する'

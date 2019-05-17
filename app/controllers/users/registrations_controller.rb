@@ -51,24 +51,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    "/users/sign_up" 
+  end
 
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)  
-  # end
+  def after_inactive_sign_up_path_for(resource)
+    "/users/sign_up"  
+  end
 
   def after_update_path_for(resource)
-   "/books"
+    "/books"
   end
 
-  def after_sign_up_path_for(resource)
-   "/users/sign_up"
-  end
-
-  def after_inactive_sign_up_path_for(resource)
-   "/users/sign_up"
+  def build_resource(hash={})
+    hash[:uid] = User.create_unique_string
+    super
   end
 end

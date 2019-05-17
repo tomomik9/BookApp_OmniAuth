@@ -69,3 +69,6 @@ gem 'devise-i18n'
 group :development do #開発環境のみ
   gem 'letter_opener_web'
 end
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'dotenv-rails'
